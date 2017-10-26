@@ -2,7 +2,7 @@
 
     //Live Toolbar
 
-    $mixerurl = "https://api.twitch.tv/kraken/streams/ChisdealHD?client_id=ulgcuszhtjc9hv7p69ovdqrl327yh4";
+    $mixerurl = "https://api.twitch.tv/kraken/streams/ChisdealHD?client_id=";
 
     $mixercontent = file_get_contents($mixerurl);
 
