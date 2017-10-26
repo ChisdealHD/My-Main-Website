@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+        <title>-+TalentRecordzBOT+-</title>
+
+
+
+         <!-- Bootstrap CSS CDN -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Our Custom CSS -->
+
+        <link rel="stylesheet" href="style3.css">
+
+    </head>
+
+    <body>
+
+
+
+
+
+
+
+        <div class="wrapper">
+
+            <!-- Sidebar Holder -->
+
+            <nav id="sidebar">
+
+                <div id="dismiss">
+
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+
+                </div>
+
+
+
+                <div class="sidebar-header">
+
+                    <h3>UBG RADIO!</h3>
+
+                </div>
+
+
+
+                <ul class="list-unstyled components">
+
+                    <p>Artist</p>
+                    <p id="name"></p>
+
+                    <li>
+
+                    <p>Title</p>
+                    <p id="title"></p>
+
+                    </li>
+
+                </ul>
+
+
+
+                <ul class="list-unstyled CTAs">
+
+                    <li><a href="http://unitedbygames.net" class="download">Home Page</a></li>
+
+                    <li><a href="http://unitedbygames.net/community" class="article">Community Fourms</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- Page Content Holder -->
+
+            <div id="content">
+
+
+
+                <nav class="navbar navbar-default">
+
+                    <div class="container-fluid">
+
+
+
+                        <div class="navbar-header">
+
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+
+                                <i class="glyphicon glyphicon-align-left"></i>
+
+                                <span>Open Status</span>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="active"><a href="#">Home</a></li>
+
+                                <li><a href="#">Youtube</a></li>
+
+                                <li><a href="#">Facebook</a></li>
+
+                                <li><a href="#">Community</a></li>
+
+                                <li><a href="#">Contact US</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+
+
+
+                <center><h2>UBG Radio</h2>
+
+                <p></p>
+
+                <div class="line"></div>
+
+               <center><div class="github-card" data-github="ChisdealHD/TalentRecordzBot" data-width="400" data-height="150" data-theme="default"></div>
+               <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+               <br>
+               <iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=ChisdealHD&repo=TalentRecordzBot&limit=25" allowtransparency="true" frameborder="0" scrolling="false" width="502px" height="252px"></iframe>
+               </center>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="overlay"></div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+         <!-- Bootstrap Js CDN -->
+
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <!-- jQuery Nicescroll CDN -->
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+
+          <script>
+
+		function updateSideBar() {
+
+		jQuery.ajax({
+	        url: "http://chisdealhd.xyz/radio/np.php",
+	        //force to handle it as text
+	        dataType: "text",
+	        async: true,
+	        success: function(data) {
+	                        
+	        var json = jQuery.parseJSON(data);
+
+
+
+          	jQuery('#name').text(json.track.artist);
+          	jQuery('#title').text(json.track.title);
+                jQuery('#name1').text(json.track.artist);
+          	jQuery('#title1').text(json.track.title);
+                jQuery('#lastsong').text(json.track.title);
+
+	       }
+	     });
+	   }
+
+	   jQuery(document).ready(function(){
+
+	        setTimeout(function(){updateSideBar();}, 100);
+	        // we're going to update our html elements / player every 15 seconds
+	        setInterval(function(){updateSideBar();}, 15000); 
+
+          setInterval(function(){
+            jQuery('#uptime').text(secondsToString (Math.floor(new Date() / 1000) - lastrestart));
+          }, 1000)
+
+		});
+
+	</script>
+
+        <script>
+
+		function updateSideBar1() {
+
+		jQuery1.ajax({
+	        url: "http://chisdealhd.xyz/radio/tracklist.php",
+	        //force to handle it as text
+	        dataType: "text",
+	        async: true,
+	        success: function(data) {
+	                        
+	        var json = jQuery1.parseJSON(data);
+
+                jQuery1('#lastsongartist').text(json.track.artist);
+                jQuery1('#lastsongtitle').text(json.track.title);
+
+	       }
+	     });
+	   }
+
+	   jQuery(document).ready(function(){
+
+	        setTimeout(function(){updateSideBar1();}, 100);
+	        // we're going to update our html elements / player every 15 seconds
+	        setInterval(function(){updateSideBar1();}, 15000); 
+
+          setInterval(function(){
+            jQuery('#uptime').text(secondsToString (Math.floor(new Date() / 1000) - lastrestart));
+          }, 1000)
+
+		});
+
+	</script>
+
+
+
+
+
+         <script type="text/javascript">
+
+             $(document).ready(function () {
+
+                 $("#sidebar").niceScroll({
+
+                     cursorcolor: '#53619d',
+
+                     cursorwidth: 4,
+
+                     cursorborder: 'none'
+
+                 });
+
+
+
+                 $('#dismiss, .overlay').on('click', function () {
+
+                    $('#sidebar').removeClass('active');
+
+                    $('.overlay').fadeOut();
+
+                 });
+
+
+
+                 $('#sidebarCollapse').on('click', function () {
+
+                     $('#sidebar').addClass('active');
+
+                     $('.overlay').fadeIn();
+
+                     $('.collapse.in').toggleClass('in');
+
+                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+
+                 });
+
+             });
+
+         </script>
+
+    </body>
+
+</html>
+
