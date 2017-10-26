@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GGRadio Popup</title>
+<link rel="icon" type="image/png" href="https://cdn.tmw.media/ggradio/images/logos/favicon.png"/>
+<link href="https://cdn.tmw.media/ggradio/code/animations.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.tmw.media/ggradio/code/fonts.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.tmw.media/ggradio/code/fontawesome.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+@charset "utf-8";
+
+body { 
+margin: 0; 
+font-family: 'Open Sans', sans-serif; 
+background-image: url('https://cdn.discordapp.com/attachments/318740191131205634/372064444055945216/logo.jpg'); 
+}
+
+video#bgvid { 
+position: fixed; 
+top: 50%; 
+left: 50%; 
+min-width: 100%; 
+min-height: 100%; 
+width: auto; 
+height: auto; 
+z-index: -100; 
+-webkit-transform: translateX(-50%) translateY(-50%); 
+transform: translateX(-50%) translateY(-50%); 
+background: #000 no-repeat; 
+background-size: cover; 
+}
+
+#overlay { 
+top: 0; 
+left: 0; 
+bottom: 0; 
+right: 0; 
+position: fixed; 
+background: url('https://cdn.tmw.media/ggradio/images/backgrounds/ol-1.png'); 
+z-index: -99; 
+}
+
+.ubgradio { 
+color: #FFF; 
+font-family: 'Roboto', sans-serif; 
+margin-top: 10px; 
+}
+
+h1 { 
+font-size: 30px; 
+margin: 0; 
+}
+
+h2 { 
+font-size: 15px; 
+margin: -5px 0 0 0; 
+}
+
+input[type='range'] { 
+-webkit-appearance: none !important; 
+background: whitesmoke; 
+height: 7px; 
+border: 1px solid #4F4F4F; 
+width: 200px; 
+outline: none!important; 
+}
+
+input[type='range']::-webkit-slider-thumb { 
+-webkit-appearance: none !important; 
+background-color: #FFF; 
+height: 15px; 
+width: 10px; 
+border: 1px solid #4F4F4F; 
+cursor: pointer; 
+-o-transition: .5s; 
+-ms-transition: .5s; 
+-moz-transition: .5s; 
+-webkit-transition: .5s; 
+transition: .5s; 
+}
+
+input[type='range']::-webkit-slider-thumb:hover { 
+background-color: #D8D8D8; 
+}
+
+.player { 
+margin-top: 10px; 
+}
+
+#playing { 
+width: 200px; 
+word-wrap: break-word; 
+color: #FFF; 
+margin-top: 56px; 
+}
+
+.ubgradio img { 
+max-width: 210px; 
+}
+</style>
+</head>
+<body>
+<center>
+<div id="overlay"></div>
+<div class="ubgradio fadeIn">
+<a href="http://unitedbygames.net/" target="_blank"><img src="https://cdn.discordapp.com/attachments/318740191131205634/372069875906117633/logo.png" alt="unitedbygames.net - eSports Radio"></a>
+</div>
+<div class="player">
+<audio id="radioplayer" src="http://streaming.radionomy.com/UBGRadio?lang=en-GB" autoplay></audio><input id="volume" name="volume" min="0" max="1" step="0.01" type="range" onchange="setVolume()" />
+</div>
+<div id="playing">
+<div class="song">
+</div>
+</center>
+<script src="http://ubgradio.chisdealhd.xyz/js/api.js"></script>
+<script src="http://ubgradio.chisdealhd.xyz/js/volume.js"></script>
+<script>
+setTimeout(function(){
+	API_song($(".song"),30000);
+},1000);
+</script>
+</body>
+</html>

@@ -19,7 +19,6 @@
                 API_artwork($(".artwork"),10000);
         },1000);
 </script>
-
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <title>UnitedbyGames || Radio Website</title>
@@ -110,6 +109,11 @@
 .playing p {
     margin: 0;
 }
+.playing p.artwork {
+    float: left;
+    margin-top: 8px;
+    margin-left: 40px;
+}
 .playing p.song {
     font-size: 30px;
     margin-left: 125px;
@@ -121,6 +125,12 @@
     position: absolute;
     margin-left: 7px;
     margin-top: 3px;
+}
+
+.playing img.artwork {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0px 0px 10px 2px #000;
 }
 
 
@@ -379,9 +389,9 @@ video.background {
 <p class="icons">
 <a id="toggle" onclick="toggle()" href="#"><i class="toggle fa fa-play-circle"></i></a><br>
 <a href="http://streaming.radionomy.com/UBGRadio?lang=en-GB"><i class="fa fa-share-square-o" aria-hidden="true" style="color: #F06A00;"></i></a><a><br>
-</a><a href="http://ubgradio.chisdealhd.xyz/ubgradio/app/web/"><i class="fa fa-external-link" aria-hidden="true" style="color: #F06A00;"></i></a>
+</a><a href="JavaScript:newPopup('https://www.unitedbygames.net/ubgradio/app/web/');"><i class="fa fa-external-link" aria-hidden="true" style="color: #F06A00;"></i></a>
 </p>
-<p class="artwork"></p>
+<div class="artwork"></p>
 <p class="song"></p>
 </div>
 
@@ -406,3 +416,4 @@ video.background {
 </body>
 
 </html>
+

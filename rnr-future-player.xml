@@ -1,0 +1,8 @@
+<ffmp3-skin folder="rnr-future-skin">
+  <bg image="bg.png" x="0" y="0"/>
+  <play image="play.png" x="57" y="141" clickimage="playclick.png"/>
+  <stop image="stop.png" x="19" y="152" clickimage="stopclick.png"/>
+  <text x="125" y="165" width="154" height="17" color="#2dd611" font="Arial" size="10"/>
+  <volume mode="holder" x="210" y="158" width="350" height="30" holderImage="holder.png"/>
+  <status imagePlay="statusplay.png" imageStop="" x="0" y="0"/>
+</ffmp3-skin>

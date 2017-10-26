@@ -16,7 +16,6 @@
 <script>
         setTimeout(function(){
                 API_song($(".song"),10000);
-                API_artwork($(".artwork"),10000);
         },1000);
 </script>
 
@@ -123,7 +122,11 @@
     margin-top: 3px;
 }
 
-
+.playing artwork {
+	width: 70px;
+	height: 70px;
+	box-shadow: 0px 0px 10px 2px #000;
+}
 body {
 
     position: fixed;
@@ -268,7 +271,7 @@ video.background {
 
 .overlay {
 
-    background-image: url("https://cdn.tmw.media/ggradio/images/backgrounds/ol-1.png");
+    background-image: url("https://cdn.discordapp.com/attachments/318740191131205634/372493310436179979/ol-1.png");
 
     top: 0px;
 
@@ -381,7 +384,8 @@ video.background {
 <a href="http://streaming.radionomy.com/UBGRadio?lang=en-GB"><i class="fa fa-share-square-o" aria-hidden="true" style="color: #F06A00;"></i></a><a><br>
 </a><a href="http://ubgradio.chisdealhd.xyz/ubgradio/app/web/"><i class="fa fa-external-link" aria-hidden="true" style="color: #F06A00;"></i></a>
 </p>
-<p class="artwork"></p>
+<p class="artwork"><iframe src="http://ubgradio.chisdealhd.xyz/api/artwork/index.php" frameborder="0" scrolling="no" width="100px" height="100px"></iframe>
+</p>
 <p class="song"></p>
 </div>
 

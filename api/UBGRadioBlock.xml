@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<block block_id="UBGRadioBlock" title="UBGRadioBlock" version_string="1.0.0" version_id="1" url="" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="" cache="now">
+  <admin_templates/>
+  <listeners/>
+  <options/>
+  <phrases/>
+  <route_prefixes/>
+  <templates>
+    <template title="EWRblock_UBGRadioBlock"><![CDATA[<center><iframe src="http://ubgradio.chisdealhd.xyz/ubgradio/app/xenforo/index.php" frameborder="0" scrolling="no" width="560px" height="111px"></iframe></center>]]></template>
+  </templates>
+</block>
