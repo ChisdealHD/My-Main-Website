@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+        <title>-+TalentRecordzBOT+-</title>
+
+
+
+         <!-- Bootstrap CSS CDN -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Our Custom CSS -->
+
+        <link rel="stylesheet" href="style3.css">
+
+    </head>
+
+    <body>
+
+
+
+
+
+
+
+        <div class="wrapper">
+
+            <!-- Sidebar Holder -->
+
+            <nav id="sidebar">
+
+                <div id="dismiss">
+
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+
+                </div>
+
+
+
+                <div class="sidebar-header">
+
+                    <h3>TalentRecordz BOT</h3>
+
+                </div>
+
+
+
+                <ul class="list-unstyled components">
+
+                    <p>BOT Name</p>
+                    <p id="name"></p>
+
+                    <li>
+
+                    <p>Connected Discords</p>
+                    <p id="discords"></p>
+
+                    </li>
+
+                    <li>
+
+                    <p>Prefix</p>
+                    <p id="prefix"></p>
+
+                    </li>
+
+                    <li>
+
+                    <p>Served Users</p>
+                    <p id="user"></p>
+
+                    </li>
+
+                    <li>
+
+                    <p>Uptime</p>
+                    <p id="uptime"></p>
+
+                    </li>
+
+                    <li>
+
+                    <p>Last Restarted</p>
+                    <p id="lastrestart"></p>
+
+                    </li>
+
+                </ul>
+
+
+
+                <ul class="list-unstyled CTAs">
+
+                    <li><a href="https://discordapp.com/oauth2/authorize?permissions=1341643849&scope=bot&client_id=203781430575235072
+" class="download">Invite BOT</a></li>
+
+                    <li><a href="http://twitter.com/chisdeal2013" class="article">Owner Twitter</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- Page Content Holder -->
+
+            <div id="content">
+
+
+
+                <nav class="navbar navbar-default">
+
+                    <div class="container-fluid">
+
+
+
+                        <div class="navbar-header">
+
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+
+                                <i class="glyphicon glyphicon-align-left"></i>
+
+                                <span>Open Status</span>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                <li class="active"><a href="http://trbot.chisdealhd.xyz/">Home</a></li>
+
+                                <li><a href="#">Youtube</a></li>
+
+                                <li><a href="#">Facebook</a></li>
+
+                                <li><a href="#">Community</a></li>
+
+                                <li><a href="#">Contact US</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+
+
+
+                <center><h2>TalentRecordz Discord BOT</h2>
+
+                <p>This bot been made by <a href="http://chisdealhd.xyz/">ChisdealHD</a> with Module of <a href="https://github.com/TortleWortle/TortleBot-Core">TortleBot-Core</a></p>
+
+                <p>This Discord bot is in BETA and been carry all along from 2015 when first made as TheCreedsClanBot</p>                
+                <p>TheCreedsClan didnt want the BOT over 2016 so <a href="http://chisdealhd.xyz/">ChisdealHD</a> Remake Bot as <a id="name1" href="https://discord.gg/EX642f8"></a></p></center>
+
+
+                <div class="line"></div>
+
+               <center><div class="github-card" data-github="ChisdealHD/TalentRecordzBot" data-width="400" data-height="150" data-theme="default"></div>
+               <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+               <br>
+               <iframe src="http://tylerlh.github.com/github-latest-commits-widget/?username=ChisdealHD&repo=TalentRecordzBot&limit=25" allowtransparency="true" frameborder="0" scrolling="false" width="502px" height="252px"></iframe>
+               </center>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="overlay"></div>
+
+
+
+
+
+        <!-- jQuery CDN -->
+
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+         <!-- Bootstrap Js CDN -->
+
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <!-- jQuery Nicescroll CDN -->
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+
+          <script>
+
+	function secondsToString(seconds) {
+
+        var numyears = Math.floor(seconds / 31536000);
+
+        var numdays = Math.floor((seconds % 31536000) / 86400);
+
+        var numhours = Math.floor(((seconds % 31536000) % 86400) / 3600);
+
+        var numminutes = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
+
+        var numseconds = Math.round((((seconds % 31536000) % 86400) % 3600) % 60);
+
+
+
+        var str = "";
+
+        if (numyears > 0) {
+
+            str += numyears + " year" + (numyears == 1 ? "" : "s") + " ";
+
+        }
+
+        if (numdays > 0) {
+
+            str += numdays + " day" + (numdays == 1 ? "" : "s") + " ";
+
+        }
+
+        if (numhours > 0) {
+
+            str += numhours + " hour" + (numhours == 1 ? "" : "s") + " ";
+
+        }
+
+        if (numminutes > 0) {
+
+            str += numminutes + " minute" + (numminutes == 1 ? "" : "s") + " ";
+
+        }
+
+        if (numseconds > 0) {
+
+            str += numseconds + " second" + (numseconds == 1 ? "" : "s") + " ";
+
+        }
+
+        return str; 
+
+}
+
+    var lastrestart;
+
+		function updateSideBar() {
+
+		jQuery.ajax({
+	        url: "http://ip:8019/api/v1/botstats",
+	        //force to handle it as text
+	        dataType: "text",
+	        async: true,
+	        success: function(data) {
+	                        
+	        var json = jQuery.parseJSON(data);
+
+
+
+          jQuery('#name').text(json.name);
+          jQuery('#name1').text(json.name);
+          jQuery('#user').text(json.ServedUsers);
+          jQuery('#discords').text(json.Discords);
+          jQuery('#prefix').text(json.prefix);
+          lastrestart = json.lastrestart;
+
+
+	        jQuery('#lastrestart').text(new Date(json.lastrestart * 1000));
+
+	       }
+	     });
+	   }
+
+	   jQuery(document).ready(function(){
+
+	        setTimeout(function(){updateSideBar();}, 100);
+	        // we're going to update our html elements / player every 15 seconds
+	        setInterval(function(){updateSideBar();}, 15000); 
+
+          setInterval(function(){
+            jQuery('#uptime').text(secondsToString (Math.floor(new Date() / 1000) - lastrestart));
+          }, 1000)
+
+		});
+
+	</script>
+
+
+
+
+         <script type="text/javascript">
+
+             $(document).ready(function () {
+
+                 $("#sidebar").niceScroll({
+
+                     cursorcolor: '#53619d',
+
+                     cursorwidth: 4,
+
+                     cursorborder: 'none'
+
+                 });
+
+
+
+                 $('#dismiss, .overlay').on('click', function () {
+
+                    $('#sidebar').removeClass('active');
+
+                    $('.overlay').fadeOut();
+
+                 });
+
+
+
+                 $('#sidebarCollapse').on('click', function () {
+
+                     $('#sidebar').addClass('active');
+
+                     $('.overlay').fadeIn();
+
+                     $('.collapse.in').toggleClass('in');
+
+                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+
+                 });
+
+             });
+
+         </script>
+
+    </body>
+
+</html>
+

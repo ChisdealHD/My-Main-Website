@@ -1,7 +1,0 @@
-
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-Options -Indexes 
-</IfModule>
-
-# END WordPress
